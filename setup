@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir game
+echo "This is a CTF (Capture the flag) made by WavierPigeon261. The game is about 5 text files which you have to find. the name and directory will be given.The first one is in the game directory of this directory" > readthis.txt
+echo "Good luck"
+echo "This is the first imp. file. find the second in /var/www/html > first.txt
