@@ -1,6 +1,25 @@
 #!/bin/bash
 
 mkdir game
-echo "This is a CTF (Capture the flag) made by WavierPigeon261. The game is about 5 text files which you have to find. the name and directory will be given.The first one is in the game directory of this directory" > readthis.txt
-echo "Good luck"
-echo "This is the first imp. file. find the second in /var/www/html > first.txt
+echo "This is a CTF (Capture the flag) made by WavierPigeon261. The game is about 5 text files which you have to find. the name and directory will be given.The first one is in the game directory of this directory. Good luck!" > readthis.txt
+echo "This is the first important file. Find the second in /var/www/html > first.txt
+mkdir /opt/impfiles
+echo "This is the second important file. The third is in /opt/impfiles" > /var/www/html/second.txt
+mkdir /sbin/files
+echo "This is the third important file. Find the fourth in /sbin/files" > /opt/impfiles/third.txt
+mkdir /usr/share/important
+echo "This is the fourth important file. Find the last one in /usr/share/important" > /sbin/files/fourth.txt
+echo "You have won! This is for you!: WP261{Y0U_H4V3_W0N}" > /usr/share/important/fifth.txt
+echo "Setup is complete. Go to the game directory and start the CTF"
+echo "What is the code in the last file?"
+read ans
+
+correct_answer="WP261{Y0U_H4V3_W0N}"
+
+if [[ "$ans" == "correct_answer" ]]; then
+  echo "Correct! Congratulations! You have completed the CTF."
+    exit 0
+  else 
+    echo "Wrong, try again!"
+  fi
+done
